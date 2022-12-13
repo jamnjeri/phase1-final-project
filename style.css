@@ -1,12 +1,40 @@
-/* .top-navbar {
+:root {
+    --colorOne: #231942;
+    --colorTwo: #5e548e;
+    --colorThree: #9f86c0;
+    --colorFour: #be95c4;
+    --colorFive: #e0b1cb;
+    --colorSix: #ffffff;
+    --colorSeven: #111111;
+  }
 
-} */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+.title {
+    font-family: 'Martel', serif;
+}
+
+.top-navbar {
+    background-color: var(--colorTwo);
+    color: var(--colorSix);
+}
 
 .navbar-styles {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     max-width: 90%;
     margin: 0 auto;
-    padding: 0.75rem 1rem;
+    padding: 0.9rem 1rem;
+}
+.header-menu {
+    align-items: center;
+    display: flex;
+    font-family:'Catamaran', sans-serif;
+    gap: 2rem;
 }
