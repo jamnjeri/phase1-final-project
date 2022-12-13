@@ -1,3 +1,12 @@
-h1 {
-    color: blue;
+/* .top-navbar {
+
+} */
+
+.navbar-styles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
 }
