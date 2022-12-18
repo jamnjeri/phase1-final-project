@@ -55,14 +55,37 @@ function categoriesSelection(){
     let categoriesSelection = document.querySelectorAll('.dropdown li')
     //Add event listener to 
     for (category of categoriesSelection){
-        console.log(category)
+        // console.log(category)
+        addEventListenerToCategoryName(category)
     }
 }
 
 function addEventListenerToCategoryName(category){
-    let categoryName = document.querySelector()
+    //Grab each category
+    let categoryName = document.querySelector(`#${category.id}`)
+    //Add an eventlistener
+    categoryName.addEventListener('click', function(){
+        //Fetch each categories data
+        let end= `${category.id}`
+        console.log(end)
+        let endPoint = `/filter.php?c=${end}`
+        fetchFunction(endPoint)
+        // console.log(`${endPoint}`)
+    })
+    // console.log(categoryName);
 }
 
+//Fetch Function
+function fetchFunction(endPoint){
+    let baseUrl = 'www.themealdb.com/api/json/v1/1'
+    let url = `${baseUrl}${endPoint}`
+    console.log(url)
+
+    //https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+
+    let foods = fetch(url)
+    console.log(foods);
+}
 
 function initialize(){
     console.log("Hi")
