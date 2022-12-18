@@ -47,9 +47,20 @@ function dropdownSearchbox(){
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
-    })
-    console.log(selection[1])
-    
+    })  
+}
+
+//Add an eventlistener to all the categories
+function categoriesSelection(){
+    let categoriesSelection = document.querySelectorAll('.dropdown li')
+    //Add event listener to 
+    for (category of categoriesSelection){
+        console.log(category)
+    }
+}
+
+function addEventListenerToCategoryName(category){
+    let categoryName = document.querySelector()
 }
 
 
@@ -57,6 +68,7 @@ function initialize(){
     console.log("Hi")
     collapsableNavbar()
     dropdownSearchbox()
+    categoriesSelection()
 }
 
 initialize()
