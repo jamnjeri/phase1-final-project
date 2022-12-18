@@ -6,27 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Icon -->
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/0941c58b81.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Hind+Vadodara:wght@300&family=Martel:wght@800&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script defer type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <!-- Top navbar -->
     <section class="top-navbar">
         <nav class="navbar-styles">
             <div class="title">
+                <img class="logo-image" src="./logo-no-background (2).png" alt="logo"/>
+                
+            </div>
+            <div class="heading">
                 <h1>MACHAKURA</h1>
             </div>
 
             <div class="header-menu">
-                <div>Discover</div>
-                <div>Cart</div>
-                <div>Login</div>
+                <div id="search-bar">
+                    <input class="search-txt" type="text" placeholder="Search">
+                    <a class="search-btn" href="#">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
             </div>
         </nav>
 
+    </section>
+
+    <!-- Collapsable sidebar -->
+    <section class="sidebar-container">
+        <div class="grid-container">
+            <div class="sidebar">
+                <button id="navButton"><i class="fa-sharp fa-solid fa-bars"></i></button>
+                <nav class="side-navigation">
+                    <ul class="dropdown-container">
+                        <li class="category-heading"><a href="#">Categories</a></li>
+                        <!-- First Tier Drop Down -->
+                        <ul class="dropdown">
+                            <li><a href="#">Beef</a></li>
+                            <li><a href="#">Breakfast</a></li>
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Dessert</a></li>
+                            <li><a href="#">Goat</a></li>
+                            <li><a href="#">Lamb</a></li>
+                            <li><a href="#">Miscellaneous</a></li>
+                            <li><a href="#">Pasta</a></li>
+                            <li><a href="#">Pork</a></li>
+                            <li><a href="#">Seafood</a></li>
+                            <li><a href="#">Side</a></li>
+                            <li><a href="#">Starter</a></li>
+                            <li><a href="#">Vegan</a></li>
+                            <li><a href="#">Vegetarian</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="navbar-main-content"></div>
+        </div>
+
+    </section>
+
+    <!-- Dropdown Search Box -->
+    <section class="dropdown-searchbar">
+        <div class="wrapper">
+            <div class="search_box">
+                <div class="drop_down">
+                    <div class="default_option">All</div>
+                    <ul>
+                        <li >All</li>
+                        <li>Categories</li>
+                        <li>Nationality</li>
+                        <li>Dish id.no.</li>
+                    </ul>
+                </div>
+                <div class="search_field">
+                    <input type="text" class="input" placeholder="I want to make...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
