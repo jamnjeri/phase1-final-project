@@ -77,14 +77,24 @@ function addEventListenerToCategoryName(category){
 
 //Fetch Function
 function fetchFunction(endPoint){
-    let baseUrl = 'www.themealdb.com/api/json/v1/1'
+    let baseUrl = 'https:www.themealdb.com/api/json/v1/1'
     let url = `${baseUrl}${endPoint}`
     console.log(url)
 
     //https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
 
     let foods = fetch(url)
-    console.log(foods);
+        .then((foods) => foods.json())
+        .then((response) => {
+            let foods =response
+            console.log(foods)
+        })
+}
+
+//Create cards for each food
+function createCardFunc(endPoint) {
+    //Create the new element
+    let parentContent = document.querySelector
 }
 
 function initialize(){
