@@ -67,7 +67,7 @@ function addEventListenerToCategoryName(category){
     categoryName.addEventListener('click', function(){
         //Fetch each categories data
         let end= `${category.id}`
-        console.log(end)
+        // console.log(end)
         let endPoint = `/filter.php?c=${end}`
         fetchFunction(endPoint)
         // console.log(`${endPoint}`)
@@ -79,7 +79,7 @@ function addEventListenerToCategoryName(category){
 function fetchFunction(endPoint){
     let baseUrl = 'https:www.themealdb.com/api/json/v1/1'
     let url = `${baseUrl}${endPoint}`
-    console.log(url)
+    //console.log(url)
 
     //https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
 
@@ -87,14 +87,34 @@ function fetchFunction(endPoint){
         .then((foods) => foods.json())
         .then((response) => {
             let foods =response
-            console.log(foods)
+            // console.log(foods.meals[1])
+            createCardFunc(foods) 
         })
 }
 
 //Create cards for each food
-function createCardFunc(endPoint) {
-    //Create the new element
-    let parentContent = document.querySelector
+function createCardFunc(foods) {
+    let myArray = foods.meals
+    for (let i=0; i < myArray.length; i++){
+        let meal = myArray[i]
+        console.log(meal.strMeal)
+        // //Grab where you want to put it
+        let parentContent = document.querySelector('.display-area')
+        //Create the new element
+        let card = document.createElement('div')
+        card.className = 'card'
+        card.id = `meal.${i}`
+        card.innerHTML = `
+            <img src="${meal.strMealThumb}">
+            <div class = "card-container">
+                <h4><b>${meal.strMeal}</b></h4>
+                <p><b>Meal ID Number:</b>${meal.idMeal}</p>
+            </div>
+        `
+        //Add card to DOM
+        parentContent.appendChild(card)
+    }
+
 }
 
 function initialize(){
