@@ -94,6 +94,7 @@ function fetchFunction(endPoint){
 
 //Create cards for each food
 function createCardFunc(foods) {
+    clearGridFunc()
     let myArray = foods.meals
     for (let i=0; i < myArray.length; i++){
         let meal = myArray[i]
@@ -115,6 +116,16 @@ function createCardFunc(foods) {
         parentContent.appendChild(card)
     }
 
+}
+
+//Create function to clear grid when another button is pressed
+function clearGridFunc(){
+    const target = document.querySelector('.display-area')
+    // console.log(target)
+    //Check if it has child nodes, if it does delete them
+    while (target.hasChildNodes()) {
+        target.removeChild(target.firstChild);
+    } 
 }
 
 function initialize(){
