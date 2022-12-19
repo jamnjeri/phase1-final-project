@@ -31,29 +31,29 @@ function dropdownSearchbox(){
     let selection = document.querySelectorAll('.drop_down ul li')
 
     //Add event listener to each option
-    //All
+    //Name
     selection[0].addEventListener('click', function(){
-        console.log("All Selected")
+        console.log("Name Selected")
         let searchChoice = 0;
         searchButtonFunc(searchChoice)
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
     })
-    //Categories
+    //Ingredient(s)
     selection[1].addEventListener('click', function(){
-        console.log("Categories Selected");
+        console.log("Ingredient(s) Selected");
         let searchChoice = 1;
         searchButtonFunc(searchChoice)
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
     })
-    //Nationality
+    //Random
     selection[2].addEventListener('click', function(){
         let searchChoice = 2;
         searchButtonFunc(searchChoice)
-        console.log("Nationality Selected");
+        console.log("Random Selected");
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
@@ -77,17 +77,23 @@ function searchButtonFunc(searchChoice){
     // console.log(userInput)
     if (userInput === '') {
         console.log("String is empty");
+        if (searchChoice === 2){
+            randomFilter()
+        }
     }
     else {
         // console.log("String is NOT empty");
         if (searchChoice === 0){
-            console.log("All")
+            console.log("Name")
+            nameFilter(userInput)
         }
         else if (searchChoice === 1){
-            console.log("Categories")
+            console.log("Ingredient")
+            ingredientFilter(userInput)
         }
         else if (searchChoice === 2){
-            console.log("Nationality")
+            console.log("Random")
+            randomFilter()
         }
         else if (searchChoice === 3){
             // console.log("ID")
@@ -96,9 +102,24 @@ function searchButtonFunc(searchChoice){
     }
 }
 
-//All filter function
-//Categories filter function
-//Nationality filter function
+//Name filter function
+function nameFilter(userInput){
+    let endPoint = `/search.php?s=${userInput}`
+    console.log(endPoint)
+    fetchFunction(endPoint)
+}
+//Ingredient(s) filter function
+function ingredientFilter(userInput){
+    let endPoint = `/filter.php?i=${userInput}`
+    console.log(endPoint)
+    fetchFunction(endPoint)
+}
+//Random filter function
+function randomFilter(){
+    let endPoint = `/random.php`
+    console.log(endPoint)
+    fetchFunction(endPoint)
+}
 //ID number filter function
 function idSearchFilter(userInput){
     let endPoint = `/lookup.php?i=${userInput}`
