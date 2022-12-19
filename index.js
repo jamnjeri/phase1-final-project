@@ -102,7 +102,7 @@ function createCardFunc(foods) {
         let parentContent = document.querySelector('.display-area')
         //Create the new element
         let card = document.createElement('div')
-        card.className = 'card'
+        card.className = `card card${i}`
         card.id = `meal.${i}`
         card.innerHTML = `
             <img src="${meal.strMealThumb}">

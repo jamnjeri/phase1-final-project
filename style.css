@@ -56,9 +56,9 @@
 .grid-container {
     width: 100vw;
     margin: 0 auto;
-    height: 90vh;
+    height: 200vh;
     display: flex;
-    border: 2px solid rgba(0, 0, 0, .4);
+    /* border: 2px solid rgba(0, 0, 0, .4); */
     transition: 1s ease;
 }
 .sidebar {
@@ -185,7 +185,7 @@ li:hover{
 .wrapper {
     /* display: flex; */
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -216,7 +216,7 @@ li:hover{
 
 .wrapper .search_box .drop_down ul {
     position: absolute;
-    top: 70px;
+    top: 40px;
     left: -10px;
     background: var(--colorSix);
     width: 150px;
@@ -231,7 +231,7 @@ li:hover{
 }
 
 .wrapper .search_box .drop_down ul li {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .wrapper .search_box .drop_down ul li:last-child {
@@ -289,19 +289,12 @@ li:hover{
 }
 
 /* Images cards */
-.display-area {
-    position: absolute;
-    padding-top: 1400px;
-    padding-left: 900px;
-    transform: translate(-50%,-50%);
-}
 .card {
     /* Add shadows to create the card effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 14px;
     transition: 0.3s;
-    border-radius: 10px;  /*Rounded Corners*/
-    height: 400px;
-    width: 400px;
+    border-radius: 10px;  
     justify-content: center;
 }
 
@@ -316,9 +309,478 @@ li:hover{
 
 .card img {
     border-radius: 10px 10px;
-    height: 85%;
-    width: 85%;
     margin: auto;
-    display: block;
     margin-top: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(30, 5vw);
+    grid-gap: 15px;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+
+.gallery img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card0 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card2 {
+    font-size: 11.2px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card4 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card5 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card6 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card7 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+.card8 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card9 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card10{
+    font-size: 14px;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card11 {
+    font-size: 11.6px;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card12 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card13 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.card14 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card15 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card16 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card17 {
+    font-size: 12px;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card18 {
+    font-size: 11.8px;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card19 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card20 {
+    font-size: 11.8px;
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.card21 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card22 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card23 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card24 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card25 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card26 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card27 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 10;
+    grid-row-end: 12;
+}
+
+.card28 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card29 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card30 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card31 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card32 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card33 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+.card34 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 13;
+    grid-row-end: 15;
+}
+
+
+.card35 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card36 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card37 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card38 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card39 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card40 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card41 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.card42 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card43 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card44 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card45 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card46 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card47 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card48 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.card49 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card50 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card51 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card52 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card53 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card54 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+.card55 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 22;
+    grid-row-end: 24;
+}
+
+/* Here */
+.card56 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card57 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card58 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card59 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card60 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card61 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card62 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 25;
+    grid-row-end: 27;
+}
+
+.card63 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 28;
+    grid-row-end: 30;
 }
