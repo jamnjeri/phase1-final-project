@@ -1,11 +1,21 @@
 //Add the Collapsable Navbar
-function collapsableNavbar(){
+function leftCollapsableNavbar(){
     const sidebar = document.querySelector('.sidebar');
     const mainContent = document.querySelector('.navbar-main-content');
     let navButton = document.querySelector('#navButton');
     navButton.addEventListener('click', function(){
         sidebar.classList.toggle('sidebar_small')
         mainContent.classList.toggle('navbar-main-content_large')
+    })
+}
+function rightCollapsableNavbar(){
+    const sidebar = document.querySelector('.right-sidebar');
+    const mainContent = document.querySelector('.rightnavbar-main-content');
+    let navButton = document.querySelector('#rightNavButton');
+    navButton.addEventListener('click', function(){
+        // console.log('clicked');
+        sidebar.classList.toggle('rightnavbar_small')
+        mainContent.classList.toggle('rightnavbar-main-content_large')
     })
 }
 
@@ -130,7 +140,8 @@ function clearGridFunc(){
 
 function initialize(){
     console.log("Hi")
-    collapsableNavbar()
+    leftCollapsableNavbar()
+    rightCollapsableNavbar()
     dropdownSearchbox()
     categoriesSelection()
 }

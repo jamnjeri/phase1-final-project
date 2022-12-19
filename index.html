@@ -39,11 +39,11 @@
 
     </section>
 
-    <!-- Collapsable sidebar -->
+    <!-- Collapsable sidebar (left) -->
     <section class="sidebar-container">
         <div class="grid-container">
             <div class="sidebar">
-                <button id="navButton"><i class="fa-sharp fa-solid fa-bars"></i></button>
+                <button id="navButton" class="leftButton"><i class="fa-sharp fa-solid fa-bars"></i></button>
                 <nav class="side-navigation">
                     <ul class="dropdown-container">
                         <!-- First Option: CATEGORIES -->
@@ -65,13 +65,27 @@
                             <li id="Vegan"><a href="#">Vegan</a></li>
                             <li id="Vegetarian"><a href="#">Vegetarian</a></li>
                         </ul>
-                        <!-- Second Option: NATIONALITY -->
-                        <li class="category-heading"><a href="#">Nationality</a></li>
                     </ul>
                 </nav>
 
             </div>
             <div class="navbar-main-content"></div>
+        </div>
+
+        <!-- Right Collapsable sidebar (right) -->
+    </section>
+
+    <section class="sidebar-rightcontainer">
+        <div class="grid-rightcontainer">
+            <div class="right-sidebar">
+                <button id="rightNavButton" class="rightButton"><i class="fa-sharp fa-solid fa-basket-shopping"></i></button>
+                <nav class="rightside-navigation">
+                    <div class="right-navbar-title">Meal Plan:</div>
+                </nav>
+
+            </div>
+            <div class="rightnavbar-main-content"></div>
+
         </div>
 
     </section>
