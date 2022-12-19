@@ -72,10 +72,40 @@ function dropdownSearchbox(){
 //Activate Search Button
 function searchButtonFunc(searchChoice){
     //Grab inputed value
-    console.log(searchChoice)
+    // console.log(searchChoice)
     let userInput = document.getElementById('searchBarInput').value
-    console.log(userInput)
+    // console.log(userInput)
+    if (userInput === '') {
+        console.log("String is empty");
+    }
+    else {
+        // console.log("String is NOT empty");
+        if (searchChoice === 0){
+            console.log("All")
+        }
+        else if (searchChoice === 1){
+            console.log("Categories")
+        }
+        else if (searchChoice === 2){
+            console.log("Nationality")
+        }
+        else if (searchChoice === 3){
+            // console.log("ID")
+            idSearchFilter(userInput)
+        }
+    }
 }
+
+//All filter function
+//Categories filter function
+//Nationality filter function
+//ID number filter function
+function idSearchFilter(userInput){
+    let endPoint = `/lookup.php?i=${userInput}`
+    console.log(endPoint)
+    fetchFunction(endPoint)
+}
+
 
 
 //Add an eventlistener to all the categories
