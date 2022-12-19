@@ -29,10 +29,13 @@ function dropdownSearchbox(){
         dropDown.className = ("active");
     })
     let selection = document.querySelectorAll('.drop_down ul li')
+
     //Add event listener to each option
     //All
     selection[0].addEventListener('click', function(){
         console.log("All Selected")
+        let searchChoice = 0;
+        searchButtonFunc(searchChoice)
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
@@ -40,12 +43,16 @@ function dropdownSearchbox(){
     //Categories
     selection[1].addEventListener('click', function(){
         console.log("Categories Selected");
+        let searchChoice = 1;
+        searchButtonFunc(searchChoice)
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
     })
     //Nationality
     selection[2].addEventListener('click', function(){
+        let searchChoice = 2;
+        searchButtonFunc(searchChoice)
         console.log("Nationality Selected");
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
@@ -53,12 +60,23 @@ function dropdownSearchbox(){
     })
     //Dish id.no.
     selection[3].addEventListener('click', function(){
+        let searchChoice = 3;
+        searchButtonFunc(searchChoice)
         console.log("Dish id.no. Selected");
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
     })  
 }
+
+//Activate Search Button
+function searchButtonFunc(searchChoice){
+    //Grab inputed value
+    console.log(searchChoice)
+    let userInput = document.getElementById('searchBarInput').value
+    console.log(userInput)
+}
+
 
 //Add an eventlistener to all the categories
 function categoriesSelection(){
