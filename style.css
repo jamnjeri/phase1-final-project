@@ -56,7 +56,7 @@
 .grid-container {
     width: 100vw;
     margin: 0 auto;
-    height: 200vh;
+    height: 355vh;
     display: flex;
     /* border: 2px solid rgba(0, 0, 0, .4); */
     transition: 1s ease;
