@@ -177,7 +177,7 @@ function createCardFunc(foods) {
     let myArray = foods.meals
     for (let i=0; i < myArray.length; i++){
         let meal = myArray[i]
-        console.log(meal.strMeal)
+        // console.log(meal.strMeal)
         // //Grab where you want to put it
         let parentContent = document.querySelector('.display-area')
         //Create the new element
@@ -187,14 +187,17 @@ function createCardFunc(foods) {
         card.innerHTML = `
             <img src="${meal.strMealThumb}">
             <div class = "card-container">
-                <h4><b>${meal.strMeal}</b></h4>
+                <h4 class="mealName"><b>${meal.strMeal}</b></h4>
                 <p><b>Meal ID Number:</b>${meal.idMeal}</p>
             </div>
         `
         //Add card to DOM
         parentContent.appendChild(card)
+
+        
     }
 
+    cardEventListener()
 }
 
 //Create function to clear grid when another button is pressed
@@ -207,12 +210,103 @@ function clearGridFunc(){
     } 
 }
 
+//Add an event listener to all cards displayed
+function cardEventListener() {
+    let target = document.querySelectorAll('.card')
+    console.log(target)
+    console.log(target.length)
+
+    //Create loop to iterate through all the elements in the list
+    for (i=0; i<target.length; i++) {
+        let post = document.querySelector(`.card${i}`)
+        console.log(post)
+        post.addEventListener('click', function() {
+            let mealId = document.getElementById(`${post.id}`).querySelector('.mealName')
+            console.log(`${post.id}clicked`)
+            let name = mealId.innerText
+            console.log(name)
+            let endPoint = `/search.php?s=${name}`
+            console.log(endPoint)
+            mealRecipeFetchFunc(endPoint)
+        })
+    }
+}
+
+//Recipe fetch function
+function mealRecipeFetchFunc(endPoint) {
+    let baseUrl = 'https:www.themealdb.com/api/json/v1/1'
+    let url = `${baseUrl}${endPoint}`
+
+    //Fetch the recipe
+    let foods = fetch(url)
+        .then((foods) => foods.json())
+        .then((response) => {
+            let foods =response
+            console.log(foods.meals)
+            recipeDisplayFunc(foods)
+        })
+}
+
+//Recipe display function
+function recipeDisplayFunc(foods){
+    clearGridFunc()
+    //Create card
+    let myArray = foods.meals
+    for (let i=0; i < myArray.length; i++){
+        let meal = myArray[i]
+        // console.log(meal.strMeal)
+        // //Grab where you want to put it
+        let parentContent = document.querySelector('.display-area')
+        //Create the new element
+        let card = document.createElement('div')
+        card.className = `recipe-card`
+        card.id = `${meal.idMeal}`
+        card.innerHTML = `
+            <img src="${meal.strMealThumb}">
+            <div class = "recipe-container">
+                <h4 class="mealName"><b>${meal.strMeal}</b></h4>
+                <p><b>Meal ID Number:</b>${meal.idMeal}</p>
+                <p><b>Category:</b>${meal.strCategory}</p>
+                <p><b>Nationality:</b>${meal.strArea}</p>
+                <p><b>Source:</b>${meal.strSource}</p>
+                <ul class='ingredients'>
+                    <li>${meal.strIngredient1}, ${meal.strMeasure1}</li>
+                    <li>${meal.strIngredient2}, ${meal.strMeasure2}</li>
+                    <li>${meal.strIngredient3}, ${meal.strMeasure3}</li>
+                    <li>${meal.strIngredient4}, ${meal.strMeasure4}</li>
+                    <li>${meal.strIngredient5}, ${meal.strMeasure5}</li>
+                    <li>${meal.strIngredient6}, ${meal.strMeasure6}</li>
+                    <li>${meal.strIngredient7}, ${meal.strMeasure7}</li>
+                    <li>${meal.strIngredient8}, ${meal.strMeasure8}</li>
+                    <li>${meal.strIngredient9}, ${meal.strMeasure9}</li>
+                    <li>${meal.strIngredient10}, ${meal.strMeasure10}</li>
+                    <li>${meal.strIngredient11}, ${meal.strMeasure11}</li>
+                    <li>${meal.strIngredient12}, ${meal.strMeasure12}</li>
+                    <li>${meal.strIngredient13}, ${meal.strMeasure13}</li>
+                    <li>${meal.strIngredient14}, ${meal.strMeasure14}</li>
+                    <li>${meal.strIngredient15}, ${meal.strMeasure15}</li>
+                    <li>${meal.strIngredient16}, ${meal.strMeasure16}</li>
+                    <li>${meal.strIngredient17}, ${meal.strMeasure17}</li>
+                    <li>${meal.strIngredient18}, ${meal.strMeasure18}</li>
+                    <li>${meal.strIngredient19}, ${meal.strMeasure19}</li>
+                    <li>${meal.strIngredient20}, ${meal.strMeasure20}</li>
+                </ul>
+                <p><b>Instructions:</b></p>
+                <p>${meal.strInstructions}</p>
+            </div>
+        `
+        //Add card to DOM
+        parentContent.appendChild(card)
+        
+    }
+}
+
 function initialize(){
     console.log("Hi")
     leftCollapsableNavbar()
     rightCollapsableNavbar()
     dropdownSearchbox()
-    categoriesSelection()
+    categoriesSelection() 
 }
 
 initialize()
