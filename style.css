@@ -836,3 +836,29 @@ li:hover{
     grid-row-start: 28;
     grid-row-end: 30;
 }
+
+/* Style the Recipe */
+.recipe-card{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    font-size: 20px;
+}
+.recipe-card img {
+    border-radius: 10px 10px;
+}
+
+.recipe-card .ingredients li{
+    display: inline-flex;
+    /* padding: 7px; */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.recipe-card .instructions {
+    padding: 7px;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 70px;
+}
