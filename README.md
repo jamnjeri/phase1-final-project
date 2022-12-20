@@ -30,7 +30,8 @@ The user, is expected to be able to:
 * Use the left hand side navigation bar to browse through the various categories provided and view the full recipe of the meal of interest. 
 
 ### Conclusion
-* The webpage layeout was difficult to deal with as it was built one item after the other. A better home page however could be have been added if more time was avilable.
+* The webpage layout was difficult to deal with as it was built one item after the other. A better home page however could be have been added if more time was avilable.
+* Unfortunately, the deployment of the code was not working as desired so to properly access the code, kindly clone the repository to your machine then use your VSCode server to go live
 
 ### Languages used to create this project
 * HTML,
@@ -51,3 +52,5 @@ The user, is expected to be able to:
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright (c) 2022 **Mathu Jamila**
+
+![Sample Images of the webpage](/home/jamila/Development/code/phase1/final-project/phase1-final-project/Image1.png)
