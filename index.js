@@ -295,11 +295,53 @@ function recipeDisplayFunc(foods){
                 <p><b>Instructions:</b></p>
                 <p class="instructions">${meal.strInstructions}</p>
             </div>
+            <div class="like-Button">
+                <ul>
+                <p>Like!</p>
+                <button id="likeButton" class="likeButton"><i class="fa-regular fa-heart"></i></button>
+                </ul>
+            </div>
         `
         //Add card to DOM
         parentContent.appendChild(card)
+        likeFunc()
         
     }
+}
+
+//Create an event listener for the heart button
+function likeFunc(){
+    let like = document.querySelector('.likeButton')
+    like.addEventListener('click', function(){
+        console.log('liked')
+        like.innerHTML = `<i class="fa-solid fa-heart"></i>`
+
+        //Add meal name to meal plan list:
+        let name = document.querySelector('.mealName').innerText
+        console.log(name)
+
+        //Grab where you want to put it
+        let parentContent = document.querySelector('.content')
+        let meal = document.createElement('div')
+        meal.className = 'meal-list'
+        meal.textContent = `-${name}        `
+        let close = document.createElement('button')
+        close.textContent = ` X`
+        close.addEventListener('click', handleDelete)
+
+        //Add the x button as a child of the p tag
+        meal.appendChild(close)
+
+        //Add the p tag
+        parentContent.appendChild(meal)
+    })
+    console.log(like)
+    // console.log('liked')
+}
+
+//Handle the removal of the name from list
+function handleDelete (event){
+    event.target.parentNode.remove()
 }
 
 function initialize(){
