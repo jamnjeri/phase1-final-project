@@ -33,7 +33,7 @@ function dropdownSearchbox(){
     //Add event listener to each option
     //Name
     selection[0].addEventListener('click', function(){
-        console.log("Name Selected")
+        // console.log("Name Selected")
         let searchChoice = 0;
         searchButtonFunc(searchChoice)
         //Close the dropdown
@@ -42,7 +42,7 @@ function dropdownSearchbox(){
     })
     //Ingredient(s)
     selection[1].addEventListener('click', function(){
-        console.log("Ingredient(s) Selected");
+        // console.log("Ingredient(s) Selected");
         let searchChoice = 1;
         searchButtonFunc(searchChoice)
         //Close the dropdown
@@ -53,7 +53,7 @@ function dropdownSearchbox(){
     selection[2].addEventListener('click', function(){
         let searchChoice = 2;
         searchButtonFunc(searchChoice)
-        console.log("Random Selected");
+        // console.log("Random Selected");
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
@@ -62,7 +62,7 @@ function dropdownSearchbox(){
     selection[3].addEventListener('click', function(){
         let searchChoice = 3;
         searchButtonFunc(searchChoice)
-        console.log("Dish id.no. Selected");
+        // console.log("Dish id.no. Selected");
         //Close the dropdown
         let dropDown = document.querySelector('.drop_down ul')
         dropDown.classList.remove("active");
@@ -76,7 +76,7 @@ function searchButtonFunc(searchChoice){
     let userInput = document.getElementById('searchBarInput').value
     // console.log(userInput)
     if (userInput === '') {
-        console.log("String is empty");
+        alert("Search box is empty.");
         if (searchChoice === 2){
             randomFilter()
         }
@@ -84,15 +84,15 @@ function searchButtonFunc(searchChoice){
     else {
         // console.log("String is NOT empty");
         if (searchChoice === 0){
-            console.log("Name")
+            // console.log("Name")
             nameFilter(userInput)
         }
         else if (searchChoice === 1){
-            console.log("Ingredient")
+            // console.log("Ingredient")
             ingredientFilter(userInput)
         }
         else if (searchChoice === 2){
-            console.log("Random")
+            // console.log("Random")
             randomFilter()
         }
         else if (searchChoice === 3){
@@ -105,25 +105,25 @@ function searchButtonFunc(searchChoice){
 //Name filter function
 function nameFilter(userInput){
     let endPoint = `/search.php?s=${userInput}`
-    console.log(endPoint)
+    // console.log(endPoint)
     fetchFunction(endPoint)
 }
 //Ingredient(s) filter function
 function ingredientFilter(userInput){
     let endPoint = `/filter.php?i=${userInput}`
-    console.log(endPoint)
+    // console.log(endPoint)
     fetchFunction(endPoint)
 }
 //Random filter function
 function randomFilter(){
     let endPoint = `/random.php`
-    console.log(endPoint)
+    // console.log(endPoint)
     fetchFunction(endPoint)
 }
 //ID number filter function
 function idSearchFilter(userInput){
     let endPoint = `/lookup.php?i=${userInput}`
-    console.log(endPoint)
+    // console.log(endPoint)
     fetchFunction(endPoint)
 }
 
@@ -213,20 +213,20 @@ function clearGridFunc(){
 //Add an event listener to all cards displayed
 function cardEventListener() {
     let target = document.querySelectorAll('.card')
-    console.log(target)
-    console.log(target.length)
+    // console.log(target)
+    // console.log(target.length)
 
     //Create loop to iterate through all the elements in the list
     for (i=0; i<target.length; i++) {
         let post = document.querySelector(`.card${i}`)
-        console.log(post)
+        // console.log(post)
         post.addEventListener('click', function() {
             let mealId = document.getElementById(`${post.id}`).querySelector('.mealName')
-            console.log(`${post.id}clicked`)
+            // console.log(`${post.id}clicked`)
             let name = mealId.innerText
-            console.log(name)
+            // console.log(name)
             let endPoint = `/search.php?s=${name}`
-            console.log(endPoint)
+            // console.log(endPoint)
             mealRecipeFetchFunc(endPoint)
         })
     }
@@ -242,7 +242,7 @@ function mealRecipeFetchFunc(endPoint) {
         .then((foods) => foods.json())
         .then((response) => {
             let foods =response
-            console.log(foods.meals)
+            // console.log(foods.meals)
             recipeDisplayFunc(foods)
         })
 }
@@ -297,7 +297,7 @@ function recipeDisplayFunc(foods){
             </div>
             <div class="like-Button">
                 <ul>
-                <p>Like!</p>
+                <p><b>Press like button to add to meal plan list</b></p>
                 <button id="likeButton" class="likeButton"><i class="fa-regular fa-heart"></i></button>
                 </ul>
             </div>
@@ -313,12 +313,12 @@ function recipeDisplayFunc(foods){
 function likeFunc(){
     let like = document.querySelector('.likeButton')
     like.addEventListener('click', function(){
-        console.log('liked')
+        // console.log('liked')
         like.innerHTML = `<i class="fa-solid fa-heart"></i>`
 
         //Add meal name to meal plan list:
         let name = document.querySelector('.mealName').innerText
-        console.log(name)
+        // console.log(name)
 
         //Grab where you want to put it
         let parentContent = document.querySelector('.content')
@@ -335,7 +335,7 @@ function likeFunc(){
         //Add the p tag
         parentContent.appendChild(meal)
     })
-    console.log(like)
+    // console.log(like)
     // console.log('liked')
 }
 

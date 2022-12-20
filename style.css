@@ -150,7 +150,7 @@ li:hover{
 .right-sidebar {
     right: 0;
     width: 10%;
-    height: 100%;
+    height: 355%;
     background: linear-gradient(to bottom, var(--colorTwo),var(--colorFive)) ;
     transition: 1s ease;
     top: 152px;
@@ -827,4 +827,46 @@ li:hover{
 
 .content {
     padding: 15px;
+}
+
+.homeHeading {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    font-size: 32pt;
+    background-color: var(--colorFive);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.homeDescription {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    font-size: 16pt;
+    text-indent: 10px;
+    text-align: center;
+}
+
+.homeInstructions {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    font-size: 16pt;
+    text-indent: 10px;
+    text-align: center;
+}
+
+.moreInfo {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    font-size: 16pt;
+    text-indent: 10px;
+    text-align: center;
 }
