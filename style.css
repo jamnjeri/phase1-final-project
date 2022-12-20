@@ -188,51 +188,6 @@ li:hover{
     padding-top: 15px;
 }
 
-
-/* Search */
-#search-bar {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background-color: var(--colorFour);
-    height: 60px;
-    border-radius: 40px;
-    padding: 10px;
-    top: 70px;
-    right: 0px;
-}
-.search-btn {
-    color: var(--colorOne);
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--colorFour);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: 0.4s;
-}
-.search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: var(--colorSix);
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-}
-#search-bar:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-}
-#search-bar:hover > .search-btn {
-    background: var(--colorFive);
-}
-
 /* Dropdown Search box */
 .wrapper {
     /* display: flex; */
