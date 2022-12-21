@@ -156,7 +156,7 @@ function addEventListenerToCategoryName(category){
 
 //Fetch Function
 function fetchFunction(endPoint){
-    let baseUrl = 'https:www.themealdb.com/api/json/v1/1'
+    let baseUrl = 'https://www.themealdb.com/api/json/v1/1'
     let url = `${baseUrl}${endPoint}`
     //console.log(url)
 

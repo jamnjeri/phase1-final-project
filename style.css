@@ -832,8 +832,8 @@ li:hover{
 .homeHeading {
     grid-column-start: 2;
     grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 7;
     font-size: 32pt;
     background-color: var(--colorFive);
     border-radius: 20px;
@@ -844,8 +844,8 @@ li:hover{
 .homeDescription {
     grid-column-start: 2;
     grid-column-end: 8;
-    grid-row-start: 3;
-    grid-row-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 7;
     font-size: 16pt;
     text-indent: 10px;
     text-align: center;
@@ -854,8 +854,8 @@ li:hover{
 .homeInstructions {
     grid-column-start: 2;
     grid-column-end: 8;
-    grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 7;
     font-size: 16pt;
     text-indent: 10px;
     text-align: center;
@@ -864,8 +864,8 @@ li:hover{
 .moreInfo {
     grid-column-start: 2;
     grid-column-end: 8;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
     font-size: 16pt;
     text-indent: 10px;
     text-align: center;
