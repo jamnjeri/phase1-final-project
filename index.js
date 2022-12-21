@@ -234,7 +234,7 @@ function cardEventListener() {
 
 //Recipe fetch function
 function mealRecipeFetchFunc(endPoint) {
-    let baseUrl = 'https:www.themealdb.com/api/json/v1/1'
+    let baseUrl = 'https://www.themealdb.com/api/json/v1/1'
     let url = `${baseUrl}${endPoint}`
 
     //Fetch the recipe
