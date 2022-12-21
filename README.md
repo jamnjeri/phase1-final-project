@@ -2,7 +2,7 @@
 ==========================
 
 ## DESCRIPTION
-**Machakura Recipe Website** is a mini web application that allows a user to browse throught the available food recipe options and create a meal plan.
+**Machakura Recipe Website** is a mini web application that allows a user to browse through the available food recipe options and create a meal plan.
 
 ```
 https://jamnjeri.github.io/phase1-final-project/
@@ -61,5 +61,3 @@ The user, is expected to be able to:
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright (c) 2022 **Mathu Jamila**
-
-![Sample Images of the webpage](/home/jamila/Development/code/phase1/final-project/phase1-final-project/Image1.png)
