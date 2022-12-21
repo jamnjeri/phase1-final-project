@@ -238,7 +238,7 @@ li:hover{
 }
 
 .wrapper .search_box .drop_down ul li {
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 .wrapper .search_box .drop_down ul li:last-child {
