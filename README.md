@@ -39,8 +39,8 @@ The user, is expected to be able to:
 * Use the left hand side navigation bar to browse through the various categories provided and view the full recipe of the meal of interest. 
 
 ### CONCLUSION
-* The webpage layout was difficult to deal with as it was built one item after the other and especially when the grid was added, it eventually turned out to be a difficult element to handle but it was too late to opt for something else. Also, a better home page could also have been added if more time was avilable.
-* The deployment of the code worked as desired but the layeout was slightly off when website accessed on a mobile device. (So it is advised, for better access of the website kindly do so on a laptop or tablet)
+* The webpage layout was difficult to deal with as it was built one item after the other and especially when the grid was added, it eventually turned out to be a difficult element to handle but it was too late to opt for something else. Also, a better home page could also have been added if more time was available.
+* The deployment of the code worked as desired but the layout was slightly off when the website was accessed on a mobile device. (So it is advised, for best user experience kindly do so on a laptop or tablet)
 
 ### Languages used to create this project
 * HTML,
