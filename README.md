@@ -61,3 +61,13 @@ The user, is expected to be able to:
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright (c) 2022 **Mathu Jamila**
+
+
+## Website Sample Images
+![Home Screen](./home-screen.png)
+
+
+![Sample Category](./beef-category.png)
+
+
+![Sample Meal](./sampleMeal.png)
